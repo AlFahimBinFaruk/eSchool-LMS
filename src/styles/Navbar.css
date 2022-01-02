@@ -1,0 +1,17 @@
+.navbarBtnWrMobileStyle > button {
+    margin-bottom: 0.4rem;
+}
+
+.navbarBtnWrMobileStyle {
+    border-top: 2px solid #ddd;
+    padding-top: 0.3rem;
+}
+
+@media screen and (min-width:500px) {
+    .bg_gray{
+        background-color: #ddd;
+    }
+    .justifyCenter{
+        justify-content: center!important;
+    }
+}

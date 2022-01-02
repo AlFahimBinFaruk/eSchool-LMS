@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dancing+Script:wght@700&family=Imperial+Script&family=Licorice&family=Luxurious+Script&family=Moo+Lah+Lah&family=Yuji+Hentaigana+Akebono&display=swap');
+
+.brandLogo{
+  font-family: 'Licorice', cursive;
+  font-weight: bold;
+  font-size: 2rem!important;
+  color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.transparent{
+  background-color: rgba(255, 255, 255, 0)!important;
+  color: black!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mr-05{
+  margin-right: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lh-0{
+  line-height: 0!important;
 }
