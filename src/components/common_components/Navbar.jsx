@@ -7,8 +7,6 @@ import {
   MDBNavbarToggler,
   MDBIcon,
   MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
   MDBBtn,
   MDBDropdown,
   MDBDropdownToggle,
@@ -17,8 +15,9 @@ import {
   MDBDropdownLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 const Navbar = () => {
+  let navigate=useNavigate();
   let login = true;
   const [showBasic, setShowBasic] = useState(false);
 
@@ -49,15 +48,15 @@ const Navbar = () => {
                   : "d-flex flex-column navbarBtnWrMobileStyle"
               }`}
             >
-              <MDBBtn color="warning">
+              <MDBBtn color="warning" onClick={()=>navigate('/courses/web-dev')}>
                 <MDBIcon fas icon="laptop-code" />{" "}
                 <span className="mx-2">Wev Development</span>
               </MDBBtn>
-              <MDBBtn color="secondary">
+              <MDBBtn color="secondary" onClick={()=>navigate('/courses/seo')}>
                 <MDBIcon fab icon="searchengin" />
                 <span className="mx-2">SEO</span>
               </MDBBtn>
-              <MDBBtn color="dark">
+              <MDBBtn color="dark" onClick={()=>navigate('/courses/digital-marketing')}>
                 <MDBIcon fas icon="user-tie" />
                 <span className="mx-2">Digital Marketing</span>
               </MDBBtn>

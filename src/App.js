@@ -7,6 +7,7 @@ import Login from "./components/AuthPages/Login";
 import Register from "./components/AuthPages/Register";
 import Footer from "./components/common_components/Footer";
 import Navbar from "./components/common_components/Navbar";
+import Courses from "./components/Pages/Courses";
 import Home from "./components/Pages/Home";
 import { AppProvider } from "./contexts/AlertContext";
 function App() {
@@ -26,6 +27,7 @@ function App() {
         {/* auth routers */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/courses/:category" element={<Courses/>} />
         </Routes>
         <Footer/>
       </div>

@@ -10,19 +10,10 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 // size="md" className="col-sm-4 col-md-10 my-2"
-const SingleCourseCard = ({
-  shopProduct = false,
-  wishlistProduct = false,
-  title,
-}) => {
+const SingleCourseCard = ({ wishlistProduct = false, title }) => {
   return (
-    <MDBCol
-      size="md"
-      className={`col-sm-4 my-2 ${
-        shopProduct || wishlistProduct ? "col-md-4" : "col-md-3"
-      } `}
-    >
-      <MDBCard>
+    <MDBCol size="md" className="col-sm-4 my-2 col-md-3">
+      <MDBCard className="shadow">
         <Link to="/productdetails">
           <MDBCardImage
             src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg"
