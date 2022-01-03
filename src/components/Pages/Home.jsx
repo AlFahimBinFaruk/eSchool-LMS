@@ -1,7 +1,7 @@
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import Header from "../common_components/Header";
-import SingleCourseCard from "../single_components/CourseCard_components/SingleCourseCard";
+import SingleCourseCard from "../single_components/Courses_components/SingleCourseCard";
 import OurFeatures from "../single_components/OurFeatures_components/OurFeatures";
 
 const Home = () => {

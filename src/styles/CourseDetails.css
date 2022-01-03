@@ -1,0 +1,57 @@
+.productDetailsHeaderListGroup {
+  width: 100%;
+}
+
+.borderNoneListGroup .list-group-item {
+  border: 0;
+  background-color: none;
+}
+
+.small-p {
+  font-size: 0.8rem;
+}
+
+.courseContentAccordionItem .accordion-button {
+  font-weight: bold;
+}
+
+.descAccordionItem p {
+  font-size: 0.8rem;
+}
+
+img.courseInstructorPic {
+  width: 100%;
+}
+
+.feedbackProgressBar {
+  width: 73%;
+}
+
+/* .courseContentAccordionItem .accordion-button{
+    padding:1.5rem 2.5rem!important;
+  }
+  
+  .courseContentAccordionItem .accordion-button::after {
+    position: absolute!important;
+    left: 5px;
+  } */
+
+@media screen and (min-width: 500px) {
+  .stickyCard {
+    position: sticky;
+    top: 3%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .productDetailsRow {
+    flex-direction: column-reverse;
+  }
+  .productDetailsHeaderFlex {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .wishlistBtn {
+    margin-top: 0.5rem !important;
+  }
+}

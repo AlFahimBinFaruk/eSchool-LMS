@@ -1,0 +1,18 @@
+.userProfilePic{
+    width: 100%;
+}
+
+.userProfileListGroup .list-group-item{
+    padding:0.5rem 0!important;
+}
+
+.userProfileListGroup .list-group-item:hover{
+    cursor: pointer;
+}
+
+.userProfileListGroup .list-group-item.active {
+    color: #fff;
+    background-color: #434547;
+    padding:0.5rem!important;
+    border-radius: 5px;
+}

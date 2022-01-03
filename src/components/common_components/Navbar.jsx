@@ -15,9 +15,9 @@ import {
   MDBDropdownLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
-  let navigate=useNavigate();
+  let navigate = useNavigate();
   let login = true;
   const [showBasic, setShowBasic] = useState(false);
 
@@ -48,15 +48,24 @@ const Navbar = () => {
                   : "d-flex flex-column navbarBtnWrMobileStyle"
               }`}
             >
-              <MDBBtn color="warning" onClick={()=>navigate('/courses/web-dev')}>
+              <MDBBtn
+                color="warning"
+                onClick={() => navigate("/courses/web-dev")}
+              >
                 <MDBIcon fas icon="laptop-code" />{" "}
                 <span className="mx-2">Wev Development</span>
               </MDBBtn>
-              <MDBBtn color="secondary" onClick={()=>navigate('/courses/seo')}>
+              <MDBBtn
+                color="secondary"
+                onClick={() => navigate("/courses/seo")}
+              >
                 <MDBIcon fab icon="searchengin" />
                 <span className="mx-2">SEO</span>
               </MDBBtn>
-              <MDBBtn color="dark" onClick={()=>navigate('/courses/digital-marketing')}>
+              <MDBBtn
+                color="dark"
+                onClick={() => navigate("/courses/digital-marketing")}
+              >
                 <MDBIcon fas icon="user-tie" />
                 <span className="mx-2">Digital Marketing</span>
               </MDBBtn>
@@ -83,14 +92,18 @@ const Navbar = () => {
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
                     <MDBDropdownLink>
-                      <Link to="/login">Login</Link>
+                      <Link to="/userprofile">My Profile(Dashboard)</Link>
                     </MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Another action</MDBDropdownLink>
+                    <MDBDropdownLink>
+                      <Link to="/cart">Cart</Link>
+                    </MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Something else here</MDBDropdownLink>
+                    <MDBDropdownLink>
+                      <Link to="/login">Login</Link>
+                    </MDBDropdownLink>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>

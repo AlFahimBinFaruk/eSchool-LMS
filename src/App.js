@@ -9,27 +9,34 @@ import Footer from "./components/common_components/Footer";
 import Navbar from "./components/common_components/Navbar";
 import Courses from "./components/Pages/Courses";
 import Home from "./components/Pages/Home";
-import { AppProvider } from "./contexts/AlertContext";
+import PageNotFound from "./components/error_components/PageNotFound";
+import InternerServerError from "./components/error_components/InternerServerError";
+import CourseDetails from "./components/Pages/CourseDetails";
+import Cart from './components/Pages/Cart';
+import Checkout from './components/Pages/Checkout';
+import UserProfile from './components/AuthPages/UserProfile'
+import InstructorProfile from "./components/Pages/InstructorProfile";
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-      <Navbar/>
-        {/* auth routers */}
-        <AppProvider>
-         
-         <Routes>
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgetpassword" element={<ForgetPassword />} />
-          </Routes>
-        </AppProvider>
-        {/* auth routers */}
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses/:category" element={<Courses/>} />
+         
+          {/* auth routers */} <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgetpassword" element={<ForgetPassword />} />
+          {/* auth routers */} <Route path="/" element={<Home />} />
+          <Route path="/courses/:category" element={<Courses />} />
+          <Route path="/details/:name" element={<CourseDetails />} />
+          <Route path="/servererror" element={<InternerServerError />} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/checkout" element={<Checkout/>}/>
+          <Route path="/userprofile" element={<UserProfile/>}/>
+          <Route path="/instructorprofile/:id" element={<InstructorProfile/>}/>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </BrowserRouter>
   );

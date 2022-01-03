@@ -1,0 +1,14 @@
+.orderDetailsProductImage {
+  width: 100%;
+  border: 1.5px solid rgb(143, 141, 141);
+}
+
+tr.orderHistoryListTableTr td {
+  width: 25%;
+}
+
+@media screen and (max-width: 500px) {
+  .orderliststablewr {
+    overflow-x: scroll;
+  }
+}

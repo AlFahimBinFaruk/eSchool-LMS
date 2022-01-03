@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   MDBIcon,
   MDBCol,
@@ -10,11 +9,18 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 // size="md" className="col-sm-4 col-md-10 my-2"
-const SingleCourseCard = ({ wishlistProduct = false, title }) => {
+const SingleCourseCard = ({
+  wishlistProduct = false,
+  corousalItem = false,
+  title,
+}) => {
   return (
-    <MDBCol size="md" className="col-sm-4 my-2 col-md-3">
+    <MDBCol
+      size="md"
+      className={`col-sm-4 my-2 col-md-${corousalItem ? "11" : "3"}`}
+    >
       <MDBCard className="shadow">
-        <Link to="/productdetails">
+        <Link to="/details/web">
           <MDBCardImage
             src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg"
             position="top"

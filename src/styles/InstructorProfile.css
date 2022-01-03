@@ -1,0 +1,10 @@
+@media screen and (max-width:500px) {
+    .instructorSocialBtn{
+        flex-direction: column;
+    }
+
+    .instructorSocialBtn button{
+        margin-top: 0.5rem;
+    }
+
+}

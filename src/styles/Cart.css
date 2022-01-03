@@ -1,0 +1,36 @@
+img.cartImg {
+    width: 5rem;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:400px) {
+    
+    .cart_tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cart_thead tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cart_table-striped {
+        /* align-items: center; */
+        text-align: center;
+    }
+
+    .cuopon_card{
+        flex-direction: column;
+    }
+
+    .cuopon_card input {
+        width: 0!important;
+    }
+
+    .cuopon_card button{
+        margin-top: 0.6rem;
+    }
+    
+}
