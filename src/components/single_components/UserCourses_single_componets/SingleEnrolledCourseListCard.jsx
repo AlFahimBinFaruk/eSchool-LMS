@@ -12,9 +12,10 @@ import {
   MDBModal,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CourseRatingModal from "./partials/CourseRatingModal";
 const SingleEnrolledCourseListCard = ({ title }) => {
+  let navigate = useNavigate();
   let rated = false;
   const [basicModal, setBasicModal] = useState(false);
 
@@ -71,7 +72,10 @@ const SingleEnrolledCourseListCard = ({ title }) => {
                 </span>
               </span>
 
-              <MDBBtn className="btn-block text-capitalize btn-success">
+              <MDBBtn
+                className="btn-block text-capitalize btn-success"
+                onClick={() => navigate("/coursedashboard/mern")}
+              >
                 Continue to course
                 <MDBIcon fas icon="hand-point-right" className="mx-1" />
               </MDBBtn>

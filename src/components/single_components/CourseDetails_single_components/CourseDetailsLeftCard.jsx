@@ -1,6 +1,6 @@
 import { MDBCol } from "mdb-react-ui-kit";
 import React from "react";
-import CourseContent from "./LeftCardPartials/CourseContent";
+import CourseContent from "../Courses_components/CourseContent";
 import CourseIsFor from "./LeftCardPartials/CourseIsFor";
 import CourseRequirementsAndDescription from "./LeftCardPartials/CourseRequirementsAndDescription";
 import CourseInstructorDetails from "../InstructorProfile_single_components/InstructorDetails";

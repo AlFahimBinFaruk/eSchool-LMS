@@ -16,6 +16,7 @@ import Cart from './components/Pages/Cart';
 import Checkout from './components/Pages/Checkout';
 import UserProfile from './components/AuthPages/UserProfile'
 import InstructorProfile from "./components/Pages/InstructorProfile";
+import CourseDashboard from './components/Pages/CourseDashboard';
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +35,7 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/userprofile" element={<UserProfile/>}/>
           <Route path="/instructorprofile/:id" element={<InstructorProfile/>}/>
+          <Route path="/coursedashboard/:name" element={<CourseDashboard/>}/>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

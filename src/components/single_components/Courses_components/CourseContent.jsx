@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../../styles/CourseContent.css';
 import {
   MDBCard,
   MDBCardBody,
@@ -7,7 +8,7 @@ import {
 } from "mdb-react-ui-kit";
 import CourseContentAccordionItem from "./Partials/CourseContentAccordionItem";
 
-const CourseContent = () => {
+const CourseContent = ({unlocked = false}) => {
   const [accordionTitle, setAccordionTitle] = useState([
     "Introduction(6 Lectures•6 Minutes)",
     "Install(8 Lectures•7 Minutes)",
@@ -31,7 +32,7 @@ const CourseContent = () => {
           className="courseContentAccordionItem"
         >
           {accordionTitle.map((title) => {
-            return <CourseContentAccordionItem title={title} />;
+            return <CourseContentAccordionItem title={title} unlocked={unlocked} />;
           })}
         </MDBAccordion>
         {/* coursecontentlist */}
