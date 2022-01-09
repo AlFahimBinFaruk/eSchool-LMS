@@ -20,7 +20,7 @@ const CourseContent = ({unlocked = false}) => {
   ]);
   return (
     <MDBCard className="my-3">
-      <MDBCardBody className="shadow">
+      <MDBCardBody className={`${unlocked ? 'bg-transparent' : 'shadow'}`}>
         <MDBCardTitle>Course content</MDBCardTitle>
         <span className="contentSecDetails">
           14 sections • 336 lectures • 31h 21m total length

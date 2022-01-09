@@ -1,5 +1,6 @@
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import "../../styles/CourseDashboard.css";
+import { AppProvider } from "../../contexts/CourseDashboardContext";
 import React from "react";
 import CourseDashboardLeftCard from "../single_components/CourseDashboard_single_components/CourseDashboardLeftCard";
 import CourseDashboardRightCard from "../single_components/CourseDashboard_single_components/CourseDashboardRightCard";
@@ -12,8 +13,10 @@ const CourseDashboard = () => {
         </h4>
         <hr />
         <MDBRow>
-          <CourseDashboardLeftCard />
-          <CourseDashboardRightCard />
+          <AppProvider>
+            <CourseDashboardLeftCard />
+            <CourseDashboardRightCard />
+          </AppProvider>
         </MDBRow>
       </MDBContainer>
     </>

@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactPlayer from "react-player";
+import { useGlobalContext } from '../../../../contexts/CourseDashboardContext'
 const CourseVideo = () => {
+  let {videoLink}=useGlobalContext()
     return (
         <div className="VideoPlayerCont shadow my-3">
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=PWXkYBmlbB4"
+          url={videoLink}
           controls
           width="100%"
         />

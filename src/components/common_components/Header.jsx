@@ -5,13 +5,14 @@ import {
   MDBCardBody,
   MDBRow,
   MDBCol,
+  MDBCardText,
 } from "mdb-react-ui-kit";
 
 const Header = () => {
   const [smallCardContent, setSmallCardContent] = useState([
     "Web Dev",
     "SEO",
-    "Digital Marketing",
+    "UI/UX",
   ]);
   return (
     <MDBCard className="my-4 shadow">
@@ -33,9 +34,9 @@ const Header = () => {
               <MDBRow>
                 {smallCardContent.map((i) => {
                   return (
-                    <MDBCol>
+                    <MDBCol size="sm" className="col-12 m-auto">
                       <MDBCard className="bg-image hover-overlay shadow mb-1">
-                        {window.screen.width >= 500 && (
+                        {window.screen.width >= 600 && (
                           <MDBCardImage
                             src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
                             position="top"
@@ -43,9 +44,11 @@ const Header = () => {
                           />
                         )}
                         <MDBCardBody>
-                          <small>
-                            <b>{i}</b>
-                          </small>
+                          <MDBCardText>
+                            <small>
+                              <b>{i}</b>
+                            </small>
+                          </MDBCardText>
                         </MDBCardBody>
                         <div
                           className="mask"

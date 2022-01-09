@@ -27,7 +27,11 @@ const LeftCardBottomNavigation = () => {
         <MDBTabs className="mb-3">
           <MDBTabsItem>
             <MDBTabsLink
-              onClick={() => handleBasicClick("AskQuestions")}
+              onClick={() => {
+                basicActive
+                  ? handleBasicClick("")
+                  : handleBasicClick("AskQuestions");
+              }}
               active={basicActive === "AskQuestions"}
             >
               Ask Questions
@@ -35,7 +39,11 @@ const LeftCardBottomNavigation = () => {
           </MDBTabsItem>
           <MDBTabsItem>
             <MDBTabsLink
-              onClick={() => handleBasicClick("Announcements")}
+              onClick={() => {
+                basicActive
+                  ? handleBasicClick("")
+                  : handleBasicClick("Announcements");
+              }}
               active={basicActive === "Announcements"}
             >
               Announcements

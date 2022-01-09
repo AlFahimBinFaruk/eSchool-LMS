@@ -5,7 +5,7 @@ import PaymentDetails from "./PaymentDetails";
 
 const CheckoutForm = () => {
   return (
-    <MDBCol className="col-lg-8 col-md-8">
+    <MDBCol className="col-lg-8 col-md-8 mb-3">
       <MDBCard className="shadow">
         <MDBCardBody>
           <MDBAccordion>

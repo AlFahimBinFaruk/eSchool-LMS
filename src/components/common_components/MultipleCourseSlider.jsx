@@ -6,7 +6,7 @@ import SingleCourseCard from "../single_components/Courses_components/SingleCour
 import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
 
 const MultipleCourseSlider = ({ title }) => {
-  const [ismobile, setIsmobile] = useState(3);
+  const [ismobile, setIsmobile] = useState(window.innerWidth <=500 ? 1 : 3);
   const [productCount, setproductCount] = useState([
     "NodeJS Full Course",
     "HTML Crash Course",
@@ -25,10 +25,10 @@ const MultipleCourseSlider = ({ title }) => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth <= 420) {
+    if (window.innerWidth <= 500) {
       setIsmobile(1);
     } else {
-      setIsmobile(4);
+      setIsmobile(3);
     }
   };
 
